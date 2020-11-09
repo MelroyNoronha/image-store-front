@@ -1,8 +1,8 @@
 import "./App.css";
-import "./homepage";
+import HomePage from "./HomePage";
 
-function App() {
-  return <div className=""></div>;
-}
+const App = () => {
+  return HomePage;
+};
 
 export default App;
