@@ -2,19 +2,22 @@ import CollectionThumbnail from "./CollectionThumbnail";
 
 const userCollections = [
   {
-    image: "",
-    title: "",
-    timestamp: "",
+    image:
+      "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    title: "Some Wedding",
+    timestamp: "20th December 2020",
   },
   {
-    image: "",
-    title: "",
-    timestamp: "",
+    image:
+      "https://images.unsplash.com/photo-1577083753695-e010191bacb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+    title: "Diwali",
+    timestamp: "10th November 2020",
   },
   {
-    image: "",
-    title: "",
-    timestamp: "",
+    image:
+      "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80",
+    title: "Holidays",
+    timestamp: "10th December 2021",
   },
 ];
 
@@ -22,7 +25,7 @@ const HomePage = () => {
   return (
     <div className="">
       {userCollections.map((collection) => (
-        <CollectionThumbnail  data={collection} />
+        <CollectionThumbnail data={collection} />
       ))}
     </div>
   );
