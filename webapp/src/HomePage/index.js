@@ -1,4 +1,5 @@
 import CollectionThumbnail from "./CollectionThumbnail";
+import CreateButton from "./CreateButton"
 
 const userCollections = [
   {
@@ -27,6 +28,7 @@ const HomePage = () => {
       {userCollections.map((collection) => (
         <CollectionThumbnail data={collection} />
       ))}
+      <CreateButton />
     </div>
   );
 };
