@@ -1,10 +1,16 @@
 // import "./CreateButton.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCamera } from '@fortawesome/free-solid-svg-icons'
+
 
 const CreateButton = () => {
   return (<button>
     <p>Create</p>
-    <img src="../assets/icons/camera-solid.svg" alt="camera icon"/>
-    </button>);
+      
+      <FontAwesomeIcon icon={faCamera} />
+      
+    </button>
+    );
 };
 
 export default CreateButton;

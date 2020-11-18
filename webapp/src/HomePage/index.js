@@ -25,8 +25,8 @@ const userCollections = [
 const HomePage = () => {
   return (
     <div className="">
-      {userCollections.map((collection) => (
-        <CollectionThumbnail data={collection} />
+      {userCollections.map((collection, key) => (
+        <CollectionThumbnail data={collection} key={key}/>
       ))}
       <CreateButton />
     </div>
