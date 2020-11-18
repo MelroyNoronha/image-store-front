@@ -1,5 +1,6 @@
 import CollectionThumbnail from "./CollectionThumbnail";
 import CreateButton from "./CreateButton"
+import "./index.css"
 
 const userCollections = [
   {
@@ -24,7 +25,7 @@ const userCollections = [
 
 const HomePage = () => {
   return (
-    <div className="">
+    <div className="homepage">
       {userCollections.map((collection, key) => (
         <CollectionThumbnail data={collection} key={key}/>
       ))}
