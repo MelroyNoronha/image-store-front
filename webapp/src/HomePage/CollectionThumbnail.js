@@ -7,9 +7,12 @@ const CollectionThumbnail = (props) => {
       <div className="image-container">
         <img src={image} alt="thumbnail"/>
       </div>
+      
+      <div className="thumbnail-details">
+        <p>{title}</p>
+        <p id="timestamp">{timestamp}</p>
+      </div>
 
-      <p>{title}</p>
-      <p>{timestamp}</p>
     </div>
   );
 };

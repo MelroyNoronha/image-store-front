@@ -1,5 +1,6 @@
 .collection-thumbnail {
-       
+    position: relative;
+    margin: 2vh;
 }
 
 img {
@@ -13,4 +14,25 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.thumbnail-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    padding-left: 2vw;
+    width: 100%;
+    background: white;
+    opacity: .8;
+}
+
+.thumbnail-details p {
+    margin: .5vh;
+    font-size: 3.5vw;
+    color: #2E2E2E;
+}
+
+#timestamp {
+    font-size: 2.9vw;
 }
