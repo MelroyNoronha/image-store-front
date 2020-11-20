@@ -1,6 +1,8 @@
+import React from "react";
 import CollectionThumbnail from "./CollectionThumbnail";
-import CreateButton from "./CreateButton"
-import "./index.css"
+import CreateButton from "./CreateButton";
+import UploadOrClick from "./UploadOrClick";
+import "./index.css";
 
 const userCollections = [
   {
@@ -23,15 +25,31 @@ const userCollections = [
   },
 ];
 
-const HomePage = () => {
-  return (
-    <div className="homepage">
-      {userCollections.map((collection, key) => (
-        <CollectionThumbnail data={collection} key={key}/>
-      ))}
-      <CreateButton />
-    </div>
-  );
+class HomePage extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      create: false
+    }
+  }
+  
+  
+  render() {
+    return (
+      <div className="homepage">
+        {userCollections.map((collection, key) => (
+          <CollectionThumbnail data={collection} key={key}/>
+        ))}
+        
+        {
+          this.state.create? <UploadOrClick/ > : <CreateButton onClick={() => this.setState({create: true})}/>
+        }
+        
+      </div>
+    );
+  }
 };
 
 export default HomePage;
+
+
