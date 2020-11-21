@@ -1,12 +1,20 @@
 import "./UploadOrClick.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 const UploadOrClick = (props) => {
 
   return (
-    <div>
-        <button>Upload Image</button>    
-        <button>Take Picture</button>
-        <button>back</button>
+    <div className="container">
+        <button className="functional-button">Upload Image</button>    
+        <button className="functional-button">Take Picture</button>
+
+        <div className="back-button" onClick={props.onBack}>
+          <FontAwesomeIcon icon={faChevronLeft} id="back-icon"/>
+          
+          <button className="back-button__button" >Back</button>
+
+        </div>
     </div>
   );
 };

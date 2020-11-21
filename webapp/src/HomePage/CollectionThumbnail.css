@@ -3,13 +3,9 @@
     margin: 2vh;
 }
 
-img {
-    
-}
-
 .image-container {
     max-width: 90vw;
-    max-height: 30vh;
+    height: 30vh;
     overflow: hidden;
     display: flex;
     align-items: center;
