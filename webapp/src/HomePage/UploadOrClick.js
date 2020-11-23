@@ -1,4 +1,5 @@
 import "./UploadOrClick.css"
+import UploadImages from './UploadImages';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
@@ -6,7 +7,8 @@ const UploadOrClick = (props) => {
 
   return (
     <div className="container">
-        <button className="functional-button">Upload Image</button>    
+        
+        <UploadImages />   
         <button className="functional-button">Take Picture</button>
 
         <div className="back-button" onClick={props.onBack}>
