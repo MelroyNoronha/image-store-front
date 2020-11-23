@@ -1,4 +1,4 @@
-import "./UploadImages.css"
+import "./TakePicture.css"
 
 
 const handleUploadClick = () => {
@@ -11,14 +11,15 @@ const handleUpload = (event) => {
   console.log(input.files);
 };
 
-const UploadImages = () => {
+const TakePicture = () => {
 
   return (
     <div id="container" onClick={handleUploadClick}>
-        <input onChange={handleUpload} id="input" type="file" accept="image/*" multiple />
-        <span>Upload</span>
+        <input capture onChange={handleUpload} id="input" type="file" accept="image/*" multiple />
+        <span>Take Picture</span>
     </div>
   );
 };
 
-export default UploadImages;
+export default TakePicture;
+
