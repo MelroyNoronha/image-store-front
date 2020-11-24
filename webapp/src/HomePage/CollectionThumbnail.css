@@ -1,34 +1,34 @@
 .collection-thumbnail {
-    position: relative;
-    margin: 2vh;
+  position: relative;
+  margin: 2vh;
 }
 
 .image-container {
-    max-width: 90vw;
-    height: 30vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  max-width: 90vw;
+  height: 30vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .thumbnail-details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 5;
-    padding-left: 2vw;
-    width: 100%;
-    background: white;
-    opacity: .8;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  padding-left: 2vw;
+  width: 100%;
+  background: white;
+  opacity: 0.8;
 }
 
 .thumbnail-details p {
-    margin: .5vh;
-    font-size: 3.5vw;
-    color: #2E2E2E;
+  margin: 0.5vh;
+  font-size: 3.5vw;
+  color: #2e2e2e;
 }
 
 #timestamp {
-    font-size: 2.9vw;
+  font-size: 2.9vw;
 }

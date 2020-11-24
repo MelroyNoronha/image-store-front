@@ -1,19 +1,19 @@
 .button {
-    all: unset;
-    display: flex;
-    align-items: center;
-    width: 90vw;
-    justify-content: center;
-    padding: 1.5vh 0 1.5vh 0;
-    border: 3px #2E2E2E solid;
+  all: unset;
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  justify-content: center;
+  padding: 1.5vh 0 1.5vh 0;
+  border: 3px #2e2e2e solid;
 }
 
 #camera-icon {
-    font-size: 6vw;
+  font-size: 6vw;
 }
 
 #button-text {
-    all: unset;
-    margin-left: 1vw;
-    font-size: 4.5vw;
+  all: unset;
+  margin-left: 1vw;
+  font-size: 4.5vw;
 }

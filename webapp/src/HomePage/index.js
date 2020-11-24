@@ -27,10 +27,10 @@ const userCollections = [
 
 class HomePage extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      create: false
-    }
+      create: false,
+    };
   }
 
   render() {
@@ -40,17 +40,14 @@ class HomePage extends React.Component {
           <CollectionThumbnail data={collection} key={key} />
         ))}
 
-        {
-          this.state.create ? 
-            <UploadOrClick onBack={() => this.setState({ create: false })} /> :
-            <CreateButton onClick={() => this.setState({ create: true })} />
-        }
-
+        {this.state.create ? (
+          <UploadOrClick onBack={() => this.setState({ create: false })} />
+        ) : (
+          <CreateButton onClick={() => this.setState({ create: true })} />
+        )}
       </div>
     );
   }
-};
+}
 
 export default HomePage;
-
-
