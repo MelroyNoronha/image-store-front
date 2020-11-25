@@ -4,17 +4,12 @@ import CollectionList from "./CollectionList";
 import "./index.css";
 // import image list component here
 
-
 class HomePage extends React.Component {
-
   render() {
     return (
       <div className="homepage">
-        
-      <CollectionList />
+        <CollectionList />
         <CreateButton />
-        
-
       </div>
     );
   }
