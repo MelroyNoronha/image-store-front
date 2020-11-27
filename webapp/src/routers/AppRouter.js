@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter, Route, Switch, Link, NavLink } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import HomePage from '../HomePage/index'
-import CreatePage from '../HomePage/CreatePage'
+import CreatePage from '../CreatePage/CreatePage'
 
 const AppRouter = () => (
   <BrowserRouter>
