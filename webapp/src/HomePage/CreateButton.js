@@ -16,8 +16,7 @@ const CreateButton = () => {
     fileInput.click();
   };
 
-  const handleUpload = async (event) => {
-    const files = event.target.files;
+  const createCollection = async (files) => {
     const images = [];
     for (let file of files) {
       const newFile = await readFile(file);
@@ -25,11 +24,16 @@ const CreateButton = () => {
         dataURL: newFile.dataURL,
         name: newFile.file.name,
         size: newFile.file.size,
-        type: newFile.file.type
+        type: newFile.file.type,
       };
       images.push(image);
     }
+
     dispatch(create({ id: "", name: "", date: "", images }));
+  };
+
+  const handleUpload = async (event) => {
+    await createCollection(event.target.files);
     history.push("/create");
   };
 
