@@ -8,6 +8,7 @@
   border: 3px #2e2e2e solid;
   position: fixed;
   bottom: 2vh;
+  background-color: white;
 }
 
 #camera-icon {

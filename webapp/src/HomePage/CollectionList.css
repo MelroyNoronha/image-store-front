@@ -1,5 +1,6 @@
 #container {
+    position: fixed;
     overflow: scroll;
-    height: 90vh;
+    height: 85vh;
     margin: 0 5vw 0vh 5vw;
 }
