@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import { create } from "../CreatePage/collectionSlice";
 import { useDispatch } from "react-redux";
 import { readFile } from "../common/functions";
+import { v4 as uuidv4 } from "uuid";
 
 const CreateButton = () => {
   const history = useHistory();
@@ -29,7 +30,7 @@ const CreateButton = () => {
       images.push(image);
     }
 
-    dispatch(create({ id: "", name: "", date: "", images }));
+    dispatch(create({ id: uuidv4(), name: "", date: "", images }));
   };
 
   const handleUpload = async (event) => {
