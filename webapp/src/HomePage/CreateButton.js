@@ -3,7 +3,7 @@ import "./CreateButton.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
-import { create } from "../redux/collectionSlice";
+import { create } from "../redux/CollectionList";
 import { useDispatch } from "react-redux";
 import { readFile } from "../common/functions";
 import { v4 as uuidv4 } from "uuid";

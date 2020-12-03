@@ -1,16 +1,27 @@
 import React from 'react';
 import './CreatePage';
+import ImageList from './ImageList';
+import { useSelector } from 'react-redux'
 
+const CreatePage = () => {
+    
+    const images = useSelector( (state) => {
+        console.log(state);
+        const collections = state.collection.data;
+        return collections[collections.length-1].images;
+    });
 
-const CreatePage = () => (
-    <div>
-        {
-            <p>list of images to be uploaded</p>
-        }
-        <button>Add More</button>
-        <button>Save</button>
-
-    </div>
-);
+    return (
+    
+        <div>
+            {
+                <ImageList images={images}/>
+            }
+            <button>Add More</button>
+            <button>Save</button>
+    
+        </div>
+    )
+};
 
 export default CreatePage;
