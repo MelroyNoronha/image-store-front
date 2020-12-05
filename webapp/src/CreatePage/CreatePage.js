@@ -2,6 +2,7 @@ import React from "react";
 import "./CreatePage.css";
 import ImageList from "./ImageList";
 import { useSelector } from "react-redux";
+import BackButton from "../common/components/BackButton";
 
 const CreatePage = () => {
   const images = useSelector((state) => {
@@ -17,6 +18,8 @@ const CreatePage = () => {
         <button class="small-button">Add More</button>
         <button class="small-button">Save</button>
       </div>
+      <BackButton />
+
     </div>
   );
 };
