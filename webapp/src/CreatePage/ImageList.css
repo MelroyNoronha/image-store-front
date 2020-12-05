@@ -1,6 +1,4 @@
 #image-list-container {
-    /* width: 40vw; */
-    /* background-color: pink; */
     padding: 1vh 2vw 1vh 2vw;
     height: 70vh;
     overflow: scroll;
