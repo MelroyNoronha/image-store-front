@@ -1,0 +1,11 @@
+#image-list-container {
+    /* width: 40vw; */
+    /* background-color: pink; */
+    padding: 1vh 2vw 1vh 2vw;
+    height: 80vh;
+    overflow: scroll;
+}
+
+#image {
+    width: 96vw;
+}

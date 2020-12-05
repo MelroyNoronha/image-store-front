@@ -1,9 +1,10 @@
 import React from "react";
+import './ImageList.css';
 
 const ImageList = (props) => (
-    <div>
-        {props.images.map((image) => (
-            <img src={image.dataURL} alt='uploaded'/>
+    <div id="image-list-container">
+        {props.images.map((image, index) => (
+            <img id="image" src={image.dataURL} key={index} alt='uploaded' />
         ))}
     </div>
 )
