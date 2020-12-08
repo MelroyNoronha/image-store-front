@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
 import createCollection from "../common/functions/createCollection";
+import { toggle } from "../redux/Loader";
+import store from "../redux/store";
+
 const CreateButton = () => {
   const history = useHistory();
 
@@ -13,7 +16,9 @@ const CreateButton = () => {
   };
 
   const handleUpload = async (event) => {
+    store.dispatch(toggle());
     await createCollection(event.target.files);
+    store.dispatch(toggle());
     history.push("/create");
   };
 
