@@ -4,7 +4,6 @@ import loaderReducer from "./Loader";
 export default configureStore({
   reducer: {
     collection: collectionReducer,
-    loader: loaderReducer
+    loader: loaderReducer,
   },
-  
 });
