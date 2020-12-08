@@ -15,11 +15,10 @@ const CreatePage = () => {
     <div>
       <ImageList images={images} />
       <div id="buttons-container">
-        <button class="small-button">Add More</button>
-        <button class="small-button">Save</button>
+        <button className="small-button">Add More</button>
+        <button className="small-button">Save</button>
       </div>
       <BackButton />
-
     </div>
   );
 };
