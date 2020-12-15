@@ -15,7 +15,9 @@ const CreatePage = () => {
     <div>
       <ImageList images={images} />
       <div id="buttons-container">
-        <button className="small-button">Add More</button>
+        <button className="small-button">
+          Add More
+        </button>
         <button className="small-button">Save</button>
       </div>
       <BackButton />
