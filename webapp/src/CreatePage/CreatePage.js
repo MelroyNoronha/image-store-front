@@ -1,6 +1,7 @@
 import React from "react";
 import "./CreatePage.css";
 import ImageList from "./ImageList";
+import TitleInput from "./TitleInput";
 import BackButton from "../common/components/BackButton";
 import HiddenFileInput from "../common/components/HiddenFileInput";
 import addImagesToCollection from "../common/functions/addImagesToCollection";
@@ -28,6 +29,7 @@ const CreatePage = () => {
   return (
     <div>
       <ImageList images={images} />
+      <TitleInput />
       <div id="buttons-container">
         <HiddenFileInput
           id="create-page-hidden-file-input"

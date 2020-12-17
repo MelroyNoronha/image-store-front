@@ -1,0 +1,21 @@
+#title-input-container {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2vw 0 2vw;
+  margin-top: 1vh;
+  /* border: 2px solid pink; */
+  /* height: 50px; */
+  /* width: 50px; */
+}
+
+#text-input {
+  all: unset;
+  border-bottom: 2px #2e2e2e solid;
+  padding-bottom: 1vh ;
+}
+
+#text {
+  font-size: 2vh;
+  margin-bottom: 3vh;
+}
