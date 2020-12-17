@@ -10,6 +10,7 @@
 
 .small-button {
   all: unset;
+  font-size: 2vh;
   border: 2px solid black;
   width: 30vw;
   padding: 4vw;
