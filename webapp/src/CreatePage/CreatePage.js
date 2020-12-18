@@ -37,12 +37,12 @@ const CreatePage = () => {
   return (
     <div>
       <ImageList images={images} />
+      <HiddenFileInput
+        id="create-page-hidden-file-input"
+        handleUpload={handleUpload}
+      />
       <TitleInput />
       <div id="buttons-container">
-        <HiddenFileInput
-          id="create-page-hidden-file-input"
-          handleUpload={handleUpload}
-        />
         <button className="small-button" onClick={handleAddMorePress}>
           Add More
         </button>
