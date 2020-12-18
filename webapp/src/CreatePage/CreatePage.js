@@ -1,5 +1,4 @@
 import React from "react";
-import "./CreatePage.css";
 import ImageList from "./ImageList";
 import TitleInput from "./TitleInput";
 import BackButton from "../common/components/BackButton";
@@ -7,9 +6,14 @@ import HiddenFileInput from "../common/components/HiddenFileInput";
 import addImagesToCollection from "../common/functions/addImagesToCollection";
 import { useSelector } from "react-redux";
 import { toggle } from "../redux/Loader";
+import { useHistory } from "react-router-dom";
+import "./CreatePage.css";
+
 import store from "../redux/store";
 
 const CreatePage = () => {
+  const history = useHistory();
+
   const images = useSelector((state) => {
     const collections = state.collection.data;
     return collections[collections.length - 1].images;
@@ -26,6 +30,10 @@ const CreatePage = () => {
     store.dispatch(toggle());
   };
 
+  const handleBackPress = () => {
+    history.push("/");
+  };
+
   return (
     <div>
       <ImageList images={images} />
@@ -40,7 +48,7 @@ const CreatePage = () => {
         </button>
         <button className="small-button">Save</button>
       </div>
-      <BackButton />
+      <BackButton onClick={handleBackPress} />
     </div>
   );
 };

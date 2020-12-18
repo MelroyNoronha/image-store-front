@@ -1,5 +1,4 @@
 #back-button-container {
-    /* background: pink; */
     height: 3vh;
     position: fixed; 
     bottom: 0;
@@ -11,4 +10,9 @@
 #back-button-container button {
     all: unset;
     margin-left: 1vw;
+    font-size: 1.8vh;
+}
+
+#back-icon {
+    font-size: 1.8vh;
 }
