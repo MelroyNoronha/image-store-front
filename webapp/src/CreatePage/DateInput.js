@@ -5,7 +5,6 @@ const DateInput = () => {
   const currentDate = new Date();
   const formattedDate = `${currentDate.getFullYear()}-${currentDate.getMonth()+1}-${currentDate.getDate()}`;
   const [date, setDate] = useState(formattedDate);
-  console.log(formattedDate);
   return (
     <div>
       <input
