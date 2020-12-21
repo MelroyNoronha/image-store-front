@@ -1,6 +1,7 @@
 import React from "react";
 import ImageList from "./ImageList";
 import TitleInput from "./TitleInput";
+import DateInput from "./DateInput";
 import BackButton from "../common/components/BackButton";
 import HiddenFileInput from "../common/components/HiddenFileInput";
 import addImagesToCollection from "../common/functions/addImagesToCollection";
@@ -41,6 +42,7 @@ const CreatePage = () => {
         id="create-page-hidden-file-input"
         handleUpload={handleUpload}
       />
+      <DateInput />
       <TitleInput />
       <div id="buttons-container">
         <button className="small-button" onClick={handleAddMorePress}>
