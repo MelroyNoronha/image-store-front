@@ -4,6 +4,7 @@ import "./HiddenFileInput.css";
 const HiddenFileInput = (props) => {
   return (
     <input
+    className="hidden-input"
       multiple
       id={props.id}
       type="file"
