@@ -1,0 +1,10 @@
+#date-input-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 98%;
+}
+
+#date-input {
+  all: unset;
+  font-size: 2vh;
+}
