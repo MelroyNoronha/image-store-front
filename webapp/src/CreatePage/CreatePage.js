@@ -25,7 +25,7 @@ const CreatePage = () => {
   const [date, setDate] = useState(formattedDate);
 
   const collections = useSelector((state) => state.collection.data);
-
+  const id = collections[collections.length - 1].id;
   const images = collections[collections.length - 1].images;
 
   const handleAddMorePress = () => {
@@ -48,7 +48,6 @@ const CreatePage = () => {
       alert(`Please enter Title`);
     }
     if (title.length > 0 && date) {
-      const id = collections[collections.length - 1].id;
       store.dispatch(edit({ id, title, date }));
       history.push("/");
     }
