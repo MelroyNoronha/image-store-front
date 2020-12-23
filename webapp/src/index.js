@@ -4,8 +4,6 @@ import reportWebVitals from "./reportWebVitals";
 import AppRouter from "./routers/AppRouter";
 import { Provider } from "react-redux";
 import store from "./redux/store";
-
-
 import "./index.css";
 
 ReactDOM.render(

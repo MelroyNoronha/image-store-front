@@ -1,16 +1,19 @@
 import "./CollectionThumbnail.css";
-const CollectionThumbnail = (props) => {
-  const { image, title, timestamp } = props.data;
+import { getHumanFriendlyDate } from "../common/functions/humanFriendlyDate";
 
+const CollectionThumbnail = (props) => {
+  const { images, title, date } = props.data;
+  const thumbnail = images[0];
+  const humanFriendlyDate = getHumanFriendlyDate(new Date(date));
   return (
     <div className="collection-thumbnail">
       <div className="image-container">
-        <img src={image} alt="thumbnail" />
+        <img src={thumbnail.dataURL} alt="thumbnail" />
       </div>
 
       <div className="thumbnail-details">
         <p>{title}</p>
-        <p id="timestamp">{timestamp}</p>
+        <p id="date">{humanFriendlyDate}</p>
       </div>
     </div>
   );

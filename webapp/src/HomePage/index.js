@@ -12,7 +12,7 @@ import "./index.css";
 
 const HomePage = () => {
   const history = useHistory();
-
+  const userCollections = store.getState().collection.data;
   const handleCreatePress = () => {
     const fileInput = document.getElementById("homepage-hidden-file-input");
     fileInput.click();
@@ -29,7 +29,7 @@ const HomePage = () => {
   if (showLoader) return <Loader />;
   return (
     <div className="homepage">
-      <CollectionList />
+      <CollectionList userCollections={userCollections} />
       <CreateButton handleCreatePress={handleCreatePress} />
       <HiddenFileInput
         handleUpload={handleUpload}

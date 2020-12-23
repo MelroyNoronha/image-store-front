@@ -16,7 +16,7 @@ const createCollection = async (files) => {
     };
     images.push(image);
   }
-  store.dispatch(create({ id: uuidv4(), name: "", date: "", images }));
+  store.dispatch(create({ id: uuidv4(), title: "", date: "", images }));
 };
 
 export default createCollection;
