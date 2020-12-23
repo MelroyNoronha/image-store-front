@@ -8,12 +8,18 @@ export const collectionList = createSlice({
       state.data.push(action.payload);
     },
     edit: (state, action) => {
+      const collectionToEdit = state.data.find(
+        (collection) => collection.id === action.payload.id
+      );
 
       if (action.payload.images) {
-        const collectionToEdit = state.data.find(
-          (collection) => collection.id === action.payload.id
-        );
         collectionToEdit.images.push(...action.payload.images);
+      }
+      if (action.payload.title) {
+        collectionToEdit.title = action.payload.title;
+      }
+      if (action.payload.date) {
+        collectionToEdit.date = action.payload.date;
       }
     },
   },

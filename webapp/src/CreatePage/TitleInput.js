@@ -1,11 +1,17 @@
 import React from "react";
 import "./TitleInput.css";
 
-const TitleInput = () => {
+const TitleInput = (props) => {
   return (
     <div id="title-input-container">
       <label id="label">Title</label>
-      <input type="text" id="text-input" name="text-input"></input>
+      <input
+        type="text"
+        id="text-input"
+        name="text-input"
+        onChange={props.handleTitleChange}
+        value={props.title}
+      ></input>
     </div>
   );
 };

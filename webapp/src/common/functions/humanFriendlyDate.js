@@ -15,7 +15,6 @@ export const getHumanFriendlyDate = (date) => {
   ];
 
   const rawDay = date.getDate();
-  console.log(rawDay);
   let day = "";
   switch (rawDay) {
     case 1:
