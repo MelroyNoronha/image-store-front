@@ -17,16 +17,32 @@
   bottom: 0;
   left: 0;
   z-index: 5;
-  padding-left: 2vw;
   width: 100%;
   background: white;
   opacity: 0.8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 0 2vw 0 2vw; */
 }
 
 .thumbnail-details p {
   margin: 0.5vh;
   font-size: 3.5vw;
   color: #2e2e2e;
+}
+
+.details {
+  /* width: 50%; */
+  margin-left: 2vw;
+}
+
+.delete-icon {
+  color: #2e2e2e;
+  position: relative;
+  left: 0;
+  margin-right: 2vw;
 }
 
 #date {

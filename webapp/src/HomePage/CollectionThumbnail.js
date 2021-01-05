@@ -1,5 +1,7 @@
 import "./CollectionThumbnail.css";
 import { getHumanFriendlyDate } from "../common/functions/humanFriendlyDate";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const CollectionThumbnail = (props) => {
   const { images, title, date } = props.data;
@@ -12,8 +14,11 @@ const CollectionThumbnail = (props) => {
       </div>
 
       <div className="thumbnail-details">
-        <p>{title}</p>
-        <p id="date">{humanFriendlyDate}</p>
+        <div className="details">
+          <p>{title}</p>
+          <p id="date">{humanFriendlyDate}</p>
+        </div>
+        <FontAwesomeIcon icon={faTimes} className="delete-icon" />
       </div>
     </div>
   );
