@@ -1,14 +1,13 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { toggle } from "../redux/Loader";
 import { useSelector } from "react-redux";
 import store from "../redux/store";
-import createCollection from "../common/functions/createCollection";
 import CreateButton from "./CreateButton";
 import CollectionList from "./CollectionList";
 import HiddenFileInput from "../common/components/HiddenFileInput";
 import Loader from "../common/components/Loader";
 import "./index.css";
+import createImagesArray from "../common/functions/createImagesArray";
 
 const HomePage = () => {
   const history = useHistory();
@@ -19,10 +18,7 @@ const HomePage = () => {
   };
 
   const handleUpload = async (event) => {
-    store.dispatch(toggle());
-    await createCollection(event.target.files);
-    store.dispatch(toggle());
-    history.push("/create");
+    history.push("/create", {images: await createImagesArray(event.target.files)});
   };
 
   const showLoader = useSelector((state) => state.loader.show);
