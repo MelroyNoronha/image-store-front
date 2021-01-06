@@ -2,14 +2,14 @@ import React from "react";
 import CollectionThumbnail from "./CollectionThumbnail";
 import "./CollectionList.css";
 
-const CollectionList = (props) => (
+const CollectionList = (props) => {
+  return (
     <div id="container">
-        {
-            props.userCollections.map((collection, key) => (
-                <CollectionThumbnail data={collection} key={key} />
-            ))
-        }
+      {props.userCollections.map((collection, key) => (
+        <CollectionThumbnail data={collection} key={key} />
+      ))}
     </div>
-);
+  );
+};
 
 export default CollectionList;

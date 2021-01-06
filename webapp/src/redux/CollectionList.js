@@ -22,9 +22,16 @@ export const collectionList = createSlice({
         collectionToEdit.date = action.payload.date;
       }
     },
+    deleteById: (state, action) => {
+      const id = action.payload.id;
+      const updatedCollectionList = state.data.filter(
+        (collection) => id !== collection.id
+      );
+      state.data = updatedCollectionList;
+    },
   },
 });
 
-export const { create, edit } = collectionList.actions;
+export const { create, edit, deleteById} = collectionList.actions;
 
 export default collectionList.reducer;
