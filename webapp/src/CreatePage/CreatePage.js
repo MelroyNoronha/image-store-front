@@ -55,9 +55,16 @@ const CreatePage = (props) => {
     setDate(e.target.value);
   };
 
+  const deleteImage = (deletionIndex) => {
+    const updatedImages = images.filter(
+      (_images, index) => index !== deletionIndex
+    );
+    setImages(updatedImages);
+  };
+
   return (
     <div>
-      <ImageList images={images} />
+      <ImageList images={images} deleteImage={deleteImage} />
       <HiddenFileInput
         id="create-page-hidden-file-input"
         handleUpload={handleUpload}

@@ -9,7 +9,7 @@ const ImageList = (props) => (
         <img id="image" src={image.dataURL} alt="uploaded" />
         <img
           src={cancelIcon}
-          //   onClick={}
+          onClick={() => props.deleteImage(index)}
           className="image-delete-icon"
           alt="delete icon"
         />
