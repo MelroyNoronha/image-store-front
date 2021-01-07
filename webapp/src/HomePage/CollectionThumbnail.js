@@ -32,6 +32,7 @@ const CollectionThumbnail = (props) => {
           src={cancelIcon}
           onClick={handleDeletePress}
           className="delete-icon"
+          alt="delete icon"
         />
       </div>
     </div>
