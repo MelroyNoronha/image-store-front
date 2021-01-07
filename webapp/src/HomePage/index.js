@@ -10,9 +10,7 @@ import createImagesArray from "../common/functions/createImagesArray";
 
 const HomePage = () => {
   const history = useHistory();
-  // console.log("before", userCollections);
   const userCollections = useSelector((state) => state.collection.data);
-  console.log("after", userCollections);
   const handleCreatePress = () => {
     const fileInput = document.getElementById("homepage-hidden-file-input");
     fileInput.click();
