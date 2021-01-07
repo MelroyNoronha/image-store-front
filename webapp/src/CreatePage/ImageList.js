@@ -1,12 +1,21 @@
 import React from "react";
-import './ImageList.css';
+import "./ImageList.css";
+import cancelIcon from "../assets/icons/cross-dark.svg";
 
 const ImageList = (props) => (
-    <div id="image-list-container">
-        {props.images.map((image, index) => (
-            <img id="image" src={image.dataURL} key={index} alt='uploaded' />
-        ))}
-    </div>
-)
+  <div id="image-list-container">
+    {props.images.map((image, index) => (
+      <div key={index} id="image-container-thumbnail">
+        <img id="image" src={image.dataURL} alt="uploaded" />
+        <img
+          src={cancelIcon}
+          //   onClick={}
+          className="image-delete-icon"
+          alt="delete icon"
+        />
+      </div>
+    ))}
+  </div>
+);
 
 export default ImageList;

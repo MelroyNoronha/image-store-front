@@ -1,9 +1,25 @@
 #image-list-container {
-    padding: 1vh 2vw 1vh 2vw;
-    height: 65vh;
-    overflow: scroll;
+  padding: 1vh 2vw 1vh 2vw;
+  height: 65vh;
+  overflow: scroll;
 }
 
 #image {
-    width: 96vw;
+  width: 96vw;
+}
+
+#image-container-thumbnail {
+  /* border: 2px solid red; */
+  margin: 0.5vh 0;
+  position: relative;
+}
+
+.image-delete-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1.5vh;
+  background-color: rgba(235, 235, 235, 60%);
+  height: 3vh;
+  margin: 1vh .5vw 1vh 1vw;
 }
