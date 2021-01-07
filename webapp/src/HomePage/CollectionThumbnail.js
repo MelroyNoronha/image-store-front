@@ -1,8 +1,7 @@
 import "./CollectionThumbnail.css";
 import deleteCollection from "../common/functions/deleteCollection";
 import { getHumanFriendlyDate } from "../common/functions/humanFriendlyDate";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import cancelIcon from "../assets/icons/cross-dark.svg";
 
 const CollectionThumbnail = (props) => {
   const { images, title, date, id } = props.data;
@@ -29,8 +28,8 @@ const CollectionThumbnail = (props) => {
           <p id="date">{humanFriendlyDate}</p>
         </div>
 
-        <FontAwesomeIcon
-          icon={faTimes}
+        <img
+          src={cancelIcon}
           onClick={handleDeletePress}
           className="delete-icon"
         />
