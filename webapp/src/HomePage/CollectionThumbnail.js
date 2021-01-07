@@ -1,9 +1,12 @@
 import "./CollectionThumbnail.css";
 import deleteCollection from "../common/functions/deleteCollection";
 import { getHumanFriendlyDate } from "../common/functions/humanFriendlyDate";
+import { useHistory } from "react-router-dom";
 import cancelIcon from "../assets/icons/cross-dark.svg";
 
 const CollectionThumbnail = (props) => {
+  const history = useHistory();
+
   const { images, title, date, id } = props.data;
   const thumbnail = images[0];
   const humanFriendlyDate = getHumanFriendlyDate(new Date(date));
@@ -16,9 +19,15 @@ const CollectionThumbnail = (props) => {
     }
   };
 
+  const handleImageClick = () => {
+    history.push("/view", {
+      images,
+    });
+  };
+
   return (
     <div className="collection-thumbnail">
-      <div className="image-container">
+      <div className="image-container" onClick={handleImageClick}>
         <img src={thumbnail.dataURL} alt="thumbnail" />
       </div>
 
