@@ -1,8 +1,8 @@
 import "./CollectionThumbnail.css";
-import deleteCollection from "../common/functions/deleteCollection";
-import { getHumanFriendlyDate } from "../common/functions/humanFriendlyDate";
+import deleteCollection from "../../common/functions/deleteCollection";
+import { getHumanFriendlyDate } from "../../common/functions/humanFriendlyDate";
 import { useHistory } from "react-router-dom";
-import cancelIcon from "../assets/icons/cross-dark.svg";
+import cancelIcon from "../../assets/icons/cross-dark.svg";
 
 const CollectionThumbnail = (props) => {
   const history = useHistory();

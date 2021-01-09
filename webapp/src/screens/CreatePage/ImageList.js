@@ -1,6 +1,6 @@
 import React from "react";
 import "./ImageList.css";
-import cancelIcon from "../assets/icons/cross-dark.svg";
+import cancelIcon from "../../assets/icons/cross-dark.svg";
 
 const ImageList = (props) => (
   <div id="image-list-container">

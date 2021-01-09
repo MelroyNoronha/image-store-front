@@ -3,14 +3,16 @@ import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CreateButton from "./CreateButton";
 import CollectionList from "./CollectionList";
-import HiddenFileInput from "../common/components/HiddenFileInput";
-import Loader from "../common/components/Loader";
+import HiddenFileInput from "../../common/components/HiddenFileInput";
+import Loader from "../../common/components/Loader";
 import "./index.css";
-import createImagesArray from "../common/functions/createImagesArray";
+import createImagesArray from "../../common/functions/createImagesArray";
 
 const HomePage = () => {
   const history = useHistory();
+  
   const userCollections = useSelector((state) => state.collection.data);
+  
   const handleCreatePress = () => {
     const fileInput = document.getElementById("homepage-hidden-file-input");
     fileInput.click();

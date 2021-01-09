@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import ImageList from "./ImageList";
 import TitleInput from "./TitleInput";
 import DateInput from "./DateInput";
-import BackButton from "../common/components/BackButton";
-import HiddenFileInput from "../common/components/HiddenFileInput";
-import createImagesArray from "../common/functions/createImagesArray";
-import createCollection from "../common/functions/createCollection";
+import BackButton from "../../common/components/BackButton";
+import HiddenFileInput from "../../common/components/HiddenFileInput";
+import createImagesArray from "../../common/functions/createImagesArray";
+import createCollection from "../../common/functions/createCollection";
+import getStandardDateFormat from "../../common/functions/getStandardDateFormat";
 import { useHistory } from "react-router-dom";
-import getStandardDateFormat from "../common/functions/getStandardDateFormat";
-import "./CreatePage.css";
+import "./index.css";
 
 const CreatePage = (props) => {
   const history = useHistory();
