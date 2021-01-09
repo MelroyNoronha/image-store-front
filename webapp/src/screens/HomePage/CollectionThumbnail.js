@@ -3,6 +3,8 @@ import deleteCollection from "../../common/functions/deleteCollection";
 import { getHumanFriendlyDate } from "../../common/functions/humanFriendlyDate";
 import { useHistory } from "react-router-dom";
 import cancelIcon from "../../assets/icons/cross-dark.svg";
+import editIcon from "../../assets/icons/edit-dark.svg";
+import cloudIcon from "../../assets/icons/cloud-dark.svg";
 
 const CollectionThumbnail = (props) => {
   const history = useHistory();
@@ -37,12 +39,28 @@ const CollectionThumbnail = (props) => {
           <p id="date">{humanFriendlyDate}</p>
         </div>
 
-        <img
-          src={cancelIcon}
-          onClick={handleDeletePress}
-          className="delete-icon"
-          alt="delete icon"
-        />
+        <div id="icons">
+          <img
+            src={cancelIcon}
+            onClick={handleDeletePress}
+            className="delete-icon"
+            alt="delete icon"
+          />
+
+          <img
+            src={cloudIcon}
+            onClick={() => {}}
+            className="cloud-icon"
+            alt="cloud icon"
+          />
+
+          <img
+            src={editIcon}
+            onClick={() => {}}
+            className="edit-icon"
+            alt="edit icon"
+          />
+        </div>
       </div>
     </div>
   );
