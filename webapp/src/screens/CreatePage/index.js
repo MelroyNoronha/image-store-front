@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ImageList from "./ImageList";
+import ImageList from "../../common/components/ImageList";
 import TitleInput from "./TitleInput";
 import DateInput from "./DateInput";
 import BackButton from "../../common/components/BackButton";
