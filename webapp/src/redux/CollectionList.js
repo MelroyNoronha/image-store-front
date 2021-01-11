@@ -13,7 +13,7 @@ export const collectionList = createSlice({
       );
 
       if (action.payload.images) {
-        collectionToEdit.images.push(...action.payload.images);
+        collectionToEdit.images = action.payload.images;
       }
       if (action.payload.title) {
         collectionToEdit.title = action.payload.title;
