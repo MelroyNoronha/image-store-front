@@ -1,5 +1,5 @@
 import React from "react";
-import "./DateInput.css";
+import "./index.css";
 const DateInput = (props) => {
   return (
     <div id="date-input-container">

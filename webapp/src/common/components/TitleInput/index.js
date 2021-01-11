@@ -1,5 +1,5 @@
 import React from "react";
-import "./TitleInput.css";
+import "./index.css";
 
 const TitleInput = (props) => {
   return (
