@@ -12,6 +12,7 @@ const CollectionThumbnail = (props) => {
   const { images, title, date, id } = props.data;
   const thumbnail = images[0];
   const humanFriendlyDate = getHumanFriendlyDate(new Date(date));
+
   const handleDeletePress = () => {
     const confirmDelete = window.confirm(
       `are you sure you want to delete ${title}?`
@@ -25,6 +26,10 @@ const CollectionThumbnail = (props) => {
     history.push("/view", {
       images,
     });
+  };
+
+  const handleEditClick = () => {
+    history.push("/edit");
   };
 
   return (
@@ -56,7 +61,7 @@ const CollectionThumbnail = (props) => {
 
           <img
             src={editIcon}
-            onClick={() => {}}
+            onClick={handleEditClick}
             className="edit-icon"
             alt="edit icon"
           />
