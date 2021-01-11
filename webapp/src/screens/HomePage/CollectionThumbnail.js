@@ -29,7 +29,9 @@ const CollectionThumbnail = (props) => {
   };
 
   const handleEditClick = () => {
-    history.push("/edit");
+    history.push("/edit", {
+      data: props.data,
+    });
   };
 
   return (
