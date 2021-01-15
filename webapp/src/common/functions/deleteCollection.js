@@ -1,4 +1,4 @@
-import { deleteById } from "../../redux/CollectionList";
+import { deleteById } from "../../redux/reducers/CollectionList";
 import store from "../../redux/store";
 
 const deleteCollection = (id) => {

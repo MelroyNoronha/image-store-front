@@ -1,5 +1,5 @@
 // createCollection dependencies:
-import { create } from "../../redux/CollectionList";
+import { create } from "../../redux/reducers/CollectionList";
 import { v4 as uuidv4 } from "uuid";
 import store from "../../redux/store";
 

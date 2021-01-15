@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import collectionReducer from "./CollectionList";
-import loaderReducer from "./Loader";
+import collectionReducer from "./reducers/CollectionList";
+import loaderReducer from "./reducers/Loader";
 
 export default configureStore({
   reducer: {
