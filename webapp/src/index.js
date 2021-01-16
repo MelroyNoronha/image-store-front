@@ -10,7 +10,7 @@ import "./index.css";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <PlaygroundRouter />
+      <AppRouter />
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
