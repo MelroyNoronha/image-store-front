@@ -1,18 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CreateButton from "./CreateButton";
 import CollectionList from "./CollectionList";
 import HiddenFileInput from "../../common/components/HiddenFileInput";
 import Loader from "../../common/components/Loader";
-import "./index.css";
 import createImagesArray from "../../common/functions/createImagesArray";
+import { get } from "idb-keyval";
+import "./index.css";
 
 const HomePage = () => {
   const history = useHistory();
-  
-  const userCollections = useSelector((state) => state.collection.data);
-  
+
+  const [userCollections, setUserCollections] = useState([]);
+
+  (async () => {
+    const storedUserCollections = await get("collections");
+    if (storedUserCollections) setUserCollections(storedUserCollections);
+  })();
+
+  console.log();
+
   const handleCreatePress = () => {
     const fileInput = document.getElementById("homepage-hidden-file-input");
     fileInput.click();
