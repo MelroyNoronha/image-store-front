@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CreateButton from "./CreateButton";
@@ -14,12 +14,12 @@ const HomePage = () => {
 
   const [userCollections, setUserCollections] = useState([]);
 
-  (async () => {
-    const storedUserCollections = await get("collections");
-    if (storedUserCollections) setUserCollections(storedUserCollections);
-  })();
-
-  console.log();
+  useEffect(() => {
+    (async () => {
+      const storedUserCollections = await get("collections");
+      if (storedUserCollections) setUserCollections(storedUserCollections);
+    })();
+  }, []);
 
   const handleCreatePress = () => {
     const fileInput = document.getElementById("homepage-hidden-file-input");
