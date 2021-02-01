@@ -15,11 +15,18 @@ const HomePage = () => {
   const [userCollections, setUserCollections] = useState([]);
 
   useEffect(() => {
+    let componentIsMounted = true;
+
     (async () => {
       const storedUserCollections = await get("collections");
-      if (storedUserCollections) setUserCollections(storedUserCollections);
+      if (storedUserCollections && componentIsMounted)
+        setUserCollections(storedUserCollections);
     })();
-  }, []);
+
+    return () => {
+      componentIsMounted = false;
+    };
+  });
 
   const handleCreatePress = () => {
     const fileInput = document.getElementById("homepage-hidden-file-input");
