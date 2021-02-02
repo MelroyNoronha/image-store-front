@@ -55,6 +55,8 @@ const CreatePage = (props) => {
   const handleSavePress = () => {
     if (title === "") {
       alert(`Please enter Title`);
+    } else if (images.length === 0) {
+      alert(`You must add at least one image`);
     } else {
       createCollection(title, date, images);
       history.push("/");
