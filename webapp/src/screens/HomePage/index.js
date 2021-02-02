@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CreateButton from "./CreateButton";
@@ -7,12 +7,11 @@ import HiddenFileInput from "../../common/components/HiddenFileInput";
 import Loader from "../../common/components/Loader";
 import createImagesArray from "../../common/functions/createImagesArray";
 import { get } from "idb-keyval";
+import updateCollectionFromStorage from "../../common/functions/updateCollectionFromStorage";
 import "./index.css";
 
 const HomePage = () => {
   const history = useHistory();
-
-  const [userCollections, setUserCollections] = useState([]);
 
   useEffect(() => {
     let componentIsMounted = true;
@@ -20,13 +19,15 @@ const HomePage = () => {
     (async () => {
       const storedUserCollections = await get("collections");
       if (storedUserCollections && componentIsMounted)
-        setUserCollections(storedUserCollections);
+        updateCollectionFromStorage(storedUserCollections);
     })();
 
     return () => {
       componentIsMounted = false;
     };
   });
+
+  const userCollections = useSelector((state) => state.collection.data);
 
   const handleCreatePress = () => {
     const fileInput = document.getElementById("homepage-hidden-file-input");

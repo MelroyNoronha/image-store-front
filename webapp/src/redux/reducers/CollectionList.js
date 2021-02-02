@@ -4,6 +4,9 @@ export const collectionList = createSlice({
   name: "collectionList",
   initialState: { data: [] },
   reducers: {
+    setCollection: (state, action) => {
+      state.data = action.payload;
+    },
     create: (state, action) => {
       state.data.push(action.payload);
     },
@@ -13,7 +16,7 @@ export const collectionList = createSlice({
       );
 
       if (action.payload.images) {
-        collectionToEdit.images.push(...action.payload.images);
+        collectionToEdit.images = action.payload.images;
       }
       if (action.payload.title) {
         collectionToEdit.title = action.payload.title;
@@ -32,6 +35,11 @@ export const collectionList = createSlice({
   },
 });
 
-export const { create, edit, deleteById} = collectionList.actions;
+export const {
+  setCollection,
+  create,
+  edit,
+  deleteById,
+} = collectionList.actions;
 
 export default collectionList.reducer;
