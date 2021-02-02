@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ImageList from "../../common/components/ImageList";
 import TitleInput from "../../common/components/TitleInput";
 import DateInput from "../../common/components/DateInput";
@@ -13,9 +13,19 @@ import "./index.css";
 const CreatePage = (props) => {
   const history = useHistory();
 
-  const [title, setTitle] = useState("");
+  useEffect(() => {
+    if (!props.location.state) {
+      openFileBrowser();
+    }
+  }, [props.location.state]);
 
-  const [images, setImages] = useState(props.location.state.images);
+  const userSelectedImages = props.location.state
+    ? props.location.state.images
+    : [];
+
+  const [images, setImages] = useState(userSelectedImages);
+
+  const [title, setTitle] = useState("");
 
   const currentDate = new Date();
 
@@ -23,9 +33,13 @@ const CreatePage = (props) => {
 
   const [date, setDate] = useState(formattedDate);
 
-  const handleAddMorePress = () => {
+  const openFileBrowser = () => {
     const fileInput = document.getElementById("create-page-hidden-file-input");
     fileInput.click();
+  };
+
+  const handleAddMorePress = () => {
+    openFileBrowser();
   };
 
   const handleUpload = async (event) => {
