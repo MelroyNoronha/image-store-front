@@ -11,12 +11,12 @@
   background-color: white;
 }
 
-#camera-icon {
+.cameraIcon {
   font-size: 6vw;
 }
 
-#button-text {
-    all: unset;
-    margin-left: 1vw;
-    font-size: 4.5vw;
+.buttonText {
+  all: unset;
+  margin-left: 1vw;
+  font-size: 4.5vw;
 }
