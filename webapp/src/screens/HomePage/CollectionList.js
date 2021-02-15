@@ -1,10 +1,10 @@
 import React from "react";
 import CollectionThumbnail from "./CollectionThumbnail";
-import "./CollectionList.css";
+import styles from "./CollectionList.module.css";
 
 const CollectionList = (props) => {
   return (
-    <div id="container">
+    <div className={styles.container}>
       {props.userCollections.map((collection, key) => (
         <CollectionThumbnail data={collection} key={key} />
       ))}
