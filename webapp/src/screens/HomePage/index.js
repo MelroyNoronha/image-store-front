@@ -8,7 +8,7 @@ import Loader from "../../common/components/Loader";
 import createImagesArray from "../../common/functions/createImagesArray";
 import { get } from "idb-keyval";
 import updateCollectionFromStorage from "../../common/functions/updateCollectionFromStorage";
-import "./index.css";
+import styles from "./index.module.css";
 
 const HomePage = () => {
   const history = useHistory();
@@ -43,7 +43,7 @@ const HomePage = () => {
   const showLoader = useSelector((state) => state.loader.show);
   if (showLoader) return <Loader />;
   return (
-    <div className="homepage">
+    <div className={styles.homepage}>
       <CollectionList userCollections={userCollections} />
       <CreateButton handleCreatePress={handleCreatePress} />
       <HiddenFileInput
