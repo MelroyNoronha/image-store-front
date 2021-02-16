@@ -5,7 +5,7 @@ import createImagesArray from "../../common/functions/createImagesArray";
 import DateInput from "../../common/components/DateInput";
 import getStandardDateFormat from "../../common/functions/getStandardDateFormat";
 import TitleInput from "../../common/components/TitleInput";
-import BackButton from "../../common/components/BackButton";
+import BackButton from "../../common/components/BackButton/index.js";
 import editCollection from "../../common/functions/editCollection";
 import { useHistory } from "react-router-dom";
 import "./index.module.css";

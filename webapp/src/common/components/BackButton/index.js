@@ -1,5 +1,5 @@
 import React from "react";
-import "./BackButton.css";
+import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
