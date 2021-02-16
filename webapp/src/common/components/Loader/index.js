@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
-import animationData from "../../assets/lotties/loader.json";
-import "./Loader.css";
+import animationData from "../../../assets/lotties/loader.json";
+import "./index.css";
 
 class Loader extends Component {
   render() {

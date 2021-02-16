@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import CreateButton from "./CreateButton";
 import CollectionList from "./CollectionList";
 import HiddenFileInput from "../../common/components/HiddenFileInput/index";
-import Loader from "../../common/components/Loader";
+import Loader from "../../common/components/Loader/";
 import createImagesArray from "../../common/functions/createImagesArray";
 import { get } from "idb-keyval";
 import updateCollectionFromStorage from "../../common/functions/updateCollectionFromStorage";
