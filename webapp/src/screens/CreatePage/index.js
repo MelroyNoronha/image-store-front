@@ -87,7 +87,7 @@ const CreatePage = (props) => {
       />
       <DateInput handleDateChange={handleDateChange} date={date} />
       <TitleInput handleTitleChange={handleTitleChange} title={title} />
-      <div id="buttons-container">
+      <div className="AddMoreAndSavebuttonsContainer">
         <button className="small-button" onClick={handleAddMorePress}>
           Add More
         </button>

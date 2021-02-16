@@ -7,6 +7,7 @@ import getStandardDateFormat from "../../common/functions/getStandardDateFormat"
 import TitleInput from "../../common/components/TitleInput";
 import BackButton from "../../common/components/BackButton/index.js";
 import editCollection from "../../common/functions/editCollection";
+import Button from "../../common/components/Button"
 import { useHistory } from "react-router-dom";
 import "./index.module.css";
 
@@ -72,13 +73,12 @@ const EditPage = (props) => {
       />
       <DateInput handleDateChange={handleDateChange} date={date} />
       <TitleInput handleTitleChange={handleTitleChange} title={title} />
-      <div id="buttons-container">
-        <button className="small-button" onClick={handleAddMorePress}>
-          Add More
-        </button>
-        <button className="small-button" onClick={handleSavePress}>
-          Save
-        </button>
+      <div className="AddMoreAndSavebuttonsContainer">
+
+        <Button text={"Add More"} onClick={handleAddMorePress}/>
+
+        <Button text={"Save"} onClick={handleSavePress}/>
+
       </div>
       <BackButton onClick={handleBackPress} />
     </div>
