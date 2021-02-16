@@ -3,7 +3,7 @@ import ImageList from "../../common/components/ImageList";
 import TitleInput from "../../common/components/TitleInput";
 import DateInput from "../../common/components/DateInput";
 import BackButton from "../../common/components/BackButton/index.js";
-import HiddenFileInput from "../../common/components/HiddenFileInput";
+import HiddenFileInput from "../../common/components/HiddenFileInput/index";
 import createImagesArray from "../../common/functions/createImagesArray";
 import createCollection from "../../common/functions/createCollection";
 import getStandardDateFormat from "../../common/functions/getStandardDateFormat";

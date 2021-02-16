@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ImageList from "../../common/components/ImageList";
-import HiddenFileInput from "../../common/components/HiddenFileInput";
+import HiddenFileInput from "../../common/components/HiddenFileInput/index";
 import createImagesArray from "../../common/functions/createImagesArray";
 import DateInput from "../../common/components/DateInput";
 import getStandardDateFormat from "../../common/functions/getStandardDateFormat";
