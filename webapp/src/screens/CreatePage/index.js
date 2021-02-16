@@ -7,8 +7,9 @@ import HiddenFileInput from "../../common/components/HiddenFileInput/index";
 import createImagesArray from "../../common/functions/createImagesArray";
 import createCollection from "../../common/functions/createCollection";
 import getStandardDateFormat from "../../common/functions/getStandardDateFormat";
+import Button from "../../common/components/Button";
 import { useHistory } from "react-router-dom";
-import "./index.css";
+import styles from "./index.module.css";
 
 const CreatePage = (props) => {
   const history = useHistory();
@@ -88,12 +89,8 @@ const CreatePage = (props) => {
       <DateInput handleDateChange={handleDateChange} date={date} />
       <TitleInput handleTitleChange={handleTitleChange} title={title} />
       <div className="AddMoreAndSavebuttonsContainer">
-        <button className="small-button" onClick={handleAddMorePress}>
-          Add More
-        </button>
-        <button className="small-button" onClick={handleSavePress}>
-          Save
-        </button>
+        <Button text={"Add More"} onClick={handleAddMorePress} />
+        <Button text={"Save"} onClick={handleSavePress} />
       </div>
       <BackButton onClick={handleBackPress} />
     </div>
