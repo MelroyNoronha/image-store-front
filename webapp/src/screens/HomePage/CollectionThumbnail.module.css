@@ -1,9 +1,9 @@
-.collection-thumbnail {
+.collectionThumbnail {
   position: relative;
   margin: 2vh;
 }
 
-.image-container {
+.imageContainer {
   max-width: 90vw;
   height: 30vh;
   overflow: hidden;
@@ -12,7 +12,7 @@
   justify-content: center;
 }
 
-.thumbnail-details {
+.thumbnailDetails {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -26,8 +26,8 @@
   justify-content: space-between;
 }
 
-.thumbnail-details p {
-  margin: 0.5vh;
+.thumbnailDetails p {
+  margin: .5vh 0 0.5vh 0;
   font-size: 3.5vw;
   color: #2e2e2e;
 }
@@ -36,25 +36,25 @@
   margin-left: 2vw;
 }
 
-.delete-icon {
+.deleteIcon {
   position: relative;
   left: 0;
   height: 3vh;
 }
 
-#date {
+.date {
   font-size: 2.9vw;
 }
 
-.edit-icon {
+.editIcon {
   height: 4vh;
 }
 
-.cloud-icon {
+.cloudIcon {
   height: 3.5vh;
 }
 
-#icons {
+.icons {
   padding-right: 1vw;
   width: 30vw;
   display: flex;

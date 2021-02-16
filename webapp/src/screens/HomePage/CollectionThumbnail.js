@@ -1,10 +1,10 @@
-import "./CollectionThumbnail.css";
 import deleteCollection from "../../common/functions/deleteCollection";
 import { getHumanFriendlyDate } from "../../common/functions/humanFriendlyDate";
 import { useHistory } from "react-router-dom";
 import cancelIcon from "../../assets/icons/cross-dark.svg";
 import editIcon from "../../assets/icons/edit-dark.svg";
 import cloudIcon from "../../assets/icons/cloud-dark.svg";
+import styles from "./CollectionThumbnail.module.css";
 
 const CollectionThumbnail = (props) => {
   const history = useHistory();
@@ -35,36 +35,36 @@ const CollectionThumbnail = (props) => {
   };
 
   return (
-    <div className="collection-thumbnail">
-      <div className="image-container" onClick={handleImageClick}>
+    <div className={styles.collectionThumbnail}>
+      <div className={styles.imageContainer} onClick={handleImageClick}>
         <img src={thumbnail.dataURL} alt="thumbnail" />
       </div>
 
-      <div className="thumbnail-details">
-        <div className="details">
+      <div className={styles.thumbnailDetails}>
+        <div className={styles.details}>
           <p>{title}</p>
-          <p id="date">{humanFriendlyDate}</p>
+          <p className={styles.date}>{humanFriendlyDate}</p>
         </div>
 
-        <div id="icons">
+        <div className={styles.icons}>
           <img
             src={cancelIcon}
             onClick={handleDeletePress}
-            className="delete-icon"
+            className={styles.deleteIcon}
             alt="delete icon"
           />
 
           <img
             src={cloudIcon}
             onClick={() => {}}
-            className="cloud-icon"
+            className={styles.cloudIcon}
             alt="cloud icon"
           />
 
           <img
             src={editIcon}
             onClick={handleEditClick}
-            className="edit-icon"
+            className={styles.editIcon}
             alt="edit icon"
           />
         </div>
