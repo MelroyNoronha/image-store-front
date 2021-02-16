@@ -8,7 +8,7 @@ import TitleInput from "../../common/components/TitleInput";
 import BackButton from "../../common/components/BackButton";
 import editCollection from "../../common/functions/editCollection";
 import { useHistory } from "react-router-dom";
-import "./index.css";
+import "./index.module.css";
 
 const EditPage = (props) => {
   const history = useHistory();
