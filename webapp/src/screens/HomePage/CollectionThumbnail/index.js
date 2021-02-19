@@ -1,10 +1,10 @@
-import deleteCollection from "../../common/functions/deleteCollection";
-import { getHumanFriendlyDate } from "../../common/functions/humanFriendlyDate";
+import { getHumanFriendlyDate } from "../../../common/functions/humanFriendlyDate";
 import { useHistory } from "react-router-dom";
-import cancelIcon from "../../assets/icons/cross-dark.svg";
-import editIcon from "../../assets/icons/edit-dark.svg";
-import cloudIcon from "../../assets/icons/cloud-dark.svg";
-import styles from "./CollectionThumbnail.module.css";
+import deleteCollection from "../../../common/functions/deleteCollection";
+import cancelIcon from "../../../assets/icons/cross-dark.svg";
+import editIcon from "../../../assets/icons/edit-dark.svg";
+import cloudIcon from "../../../assets/icons/cloud-dark.svg";
+import styles from "./index.module.css";
 
 const CollectionThumbnail = (props) => {
   const history = useHistory();

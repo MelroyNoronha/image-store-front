@@ -1,6 +1,6 @@
 import React from "react";
-import CollectionThumbnail from "./CollectionThumbnail";
-import styles from "./CollectionList.module.css";
+import CollectionThumbnail from "../CollectionThumbnail/";
+import styles from "./index.module.css";
 
 const CollectionList = (props) => {
   return (

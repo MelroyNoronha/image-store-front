@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
-import styles from "./CreateButton.module.css";
+import styles from "./index.module.css";
 
 
 const CreateButton = (props) => {
