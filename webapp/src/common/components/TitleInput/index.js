@@ -1,13 +1,13 @@
 import React from "react";
-import "./index.css";
+import styles from "./index.module.css";
 
 const TitleInput = (props) => {
   return (
-    <div id="title-input-container">
-      <label id="label">Title</label>
+    <div className={styles.titleInputContainer}>
+      <label className={styles.label}>Title</label>
       <input
         type="text"
-        id="text-input"
+        className={styles.textInput}
         name="text-input"
         onChange={props.handleTitleChange}
         value={props.title}
