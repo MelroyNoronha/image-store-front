@@ -9,7 +9,7 @@ import createCollection from "../../common/functions/createCollection";
 import getStandardDateFormat from "../../common/functions/getStandardDateFormat";
 import Button from "../../common/components/Button";
 import { useHistory } from "react-router-dom";
-import styles from "./index.module.css";
+// import styles from "./index.module.css";
 
 const CreatePage = (props) => {
   const history = useHistory();
