@@ -1,11 +1,11 @@
 import React from "react";
-import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import styles from "./index.module.css";
 
 const BackButton = (props) => (
-  <div id="back-button-container">
-    <FontAwesomeIcon icon={faChevronLeft} id="back-icon" />
+  <div className={styles.backButtonContainer}>
+    <FontAwesomeIcon icon={faChevronLeft} className={styles.backIcon} />
     <button onClick={props.onClick}>Back</button>
   </div>
 );

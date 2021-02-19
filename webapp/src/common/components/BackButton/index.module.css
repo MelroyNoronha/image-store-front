@@ -1,4 +1,4 @@
-#back-button-container {
+.backButtonContainer {
     height: 3vh;
     position: fixed; 
     bottom: 0;
@@ -7,12 +7,12 @@
     margin: 1vh 0 1vh 0;
 }
 
-#back-button-container button {
+.backButtonContainer button {
     all: unset;
     margin-left: 1vw;
     font-size: 1.8vh;
 }
 
-#back-icon {
+.backIcon {
     font-size: 1.8vh;
 }
