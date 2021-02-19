@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Lottie from "react-lottie";
 import animationData from "../../../assets/lotties/loader.json";
-import "./index.css";
+import styles from "./index.module.css";
 
 class Loader extends Component {
   render() {
@@ -15,7 +15,7 @@ class Loader extends Component {
     };
 
     return (
-      <div id="loader">
+      <div className={styles.loader}>
         <Lottie options={defaultOptions} height={100} width={100} />
       </div>
     );
