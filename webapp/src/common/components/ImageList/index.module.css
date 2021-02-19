@@ -1,19 +1,19 @@
-#image-list-container {
+.imageListContainer {
   padding: 1vh 2vw 1vh 2vw;
   height: 60vh;
   overflow: scroll;
 }
 
-#image {
+.image {
   width: 96vw;
 }
 
-#image-container-thumbnail {
+.imageContainerThumbnail {
   margin: 0.5vh 0;
   position: relative;
 }
 
-.image-delete-icon {
+.imageDeleteIcon {
   position: absolute;
   bottom: 0;
   right: 0;
