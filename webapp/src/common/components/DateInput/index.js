@@ -1,11 +1,12 @@
 import React from "react";
-import "./index.css";
+import styles from "./index.module.css";
+
 const DateInput = (props) => {
   return (
-    <div id="date-input-container">
+    <div className={styles.dateInputContainer}>
       <input
         type="date"
-        id="date-input"
+        className={styles.dateInput}
         name="date-input"
         value={props.date}
         onChange={props.handleDateChange}
