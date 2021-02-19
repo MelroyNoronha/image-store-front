@@ -1,10 +1,10 @@
 import React from "react";
-import "./index.css";
+import styles from "./index.module.css";
 
 const HiddenFileInput = (props) => {
   return (
     <input
-    className="hidden-input"
+      className={styles.hiddenInput}
       multiple
       id={props.id}
       type="file"
